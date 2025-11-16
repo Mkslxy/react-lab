@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-
+th, td {
+  padding: 8px 12px;
+  white-space: nowrap;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
