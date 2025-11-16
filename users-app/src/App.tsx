@@ -222,7 +222,7 @@ export default function App() {
                   value={search}
                   onChange={(e) => setSearch(e.target.value)}
                   placeholder="Пошук за ім'ям..."
-                  className="w-full rounded-md border px-3 py-2 text-sm mb-3 shadow-sm focus:ring-2 focus:ring-blue-400 focus:border-blue-400"
+                  className="w-full rounded border px-3 py-2 text-sm mb-3"
               />
 
               <div className="max-h-64 overflow-auto border rounded">
@@ -258,13 +258,23 @@ export default function App() {
                         <td>{p.email}</td>
                         <td>{p.birthDate}</td>
                         <td>
-                          <button className="text-blue-500 hover:text-blue-700 transition">
-                            ✏️
+                          <button
+                              className="text-blue-600"
+                              onClick={() => {
+                                setEditTarget(p);
+                                setForm(p);
+                              }}
+
+                          >
+                            ✏
                           </button>
                         </td>
                         <td>
-                          <button className="text-red-500 hover:text-red-700 transition">
-                            🗑️
+                          <button
+                              className="text-red-600"
+                              onClick={() => setDeleteTarget(p)}
+                          >
+                            🗑
                           </button>
                         </td>
                       </tr>
